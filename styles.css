@@ -10,22 +10,22 @@ body {
 
 #game-area {
     position: relative;
-    width: 80%; /* Mudamos para largura relativa */
-    max-width: 400px; /* Máximo de 400px para evitar que fique muito grande */
-    height: 80vw; /* Altura relativa à largura */
-    max-height: 400px; /* Máximo de 400px para evitar que fique muito grande */
+    width: 80%;
+    max-width: 400px;
+    height: 80vw;
+    max-height: 400px;
     border: 2px solid rgb(255, 255, 255);
-    margin: auto; /* Centraliza o game-area */
+    margin: auto;
 }
 
 .square {
     position: absolute;
-    width: 10%; /* Mudamos para largura relativa */
-    height: 10%; /* Altura relativa */
-    min-width: 50px; /* Mínimo de 50px para manter a legibilidade */
-    min-height: 50px; /* Mínimo de 50px */
-    max-width: 100px; /* Máximo de 100px para evitar que fique muito grande */
-    max-height: 100px; /* Máximo de 100px */
+    width: 10%;
+    height: 10%;
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 100px;
+    max-height: 100px;
     background-color: #3498db;
     cursor: pointer;
 }
@@ -34,5 +34,6 @@ body {
     position: absolute;
     top: 10px;
     left: 10px;
-    font-size: 18px; /* Tamanho da fonte para a pontuação */
+    font-size: 18px;
+    z-index: 1; /* Garante que o score-display esteja na frente dos quadrados */
 }
