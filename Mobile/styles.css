@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+    color: white;
+}
+
+#game-area {
+    position: relative;
+    width: 80%; /* Mudamos para largura relativa */
+    max-width: 400px; /* Máximo de 400px para evitar que fique muito grande */
+    height: 80vw; /* Altura relativa à largura */
+    max-height: 400px; /* Máximo de 400px para evitar que fique muito grande */
+    border: 2px solid rgb(255, 255, 255);
+    margin: auto; /* Centraliza o game-area */
+}
+
+.square {
+    position: absolute;
+    width: 10%; /* Mudamos para largura relativa */
+    height: 10%; /* Altura relativa */
+    min-width: 50px; /* Mínimo de 50px para manter a legibilidade */
+    min-height: 50px; /* Mínimo de 50px */
+    max-width: 100px; /* Máximo de 100px para evitar que fique muito grande */
+    max-height: 100px; /* Máximo de 100px */
+    background-color: #3498db;
+    cursor: pointer;
+}
+
+#score-display {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 18px; /* Tamanho da fonte para a pontuação */
+}
