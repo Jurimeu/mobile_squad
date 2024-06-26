@@ -26,11 +26,11 @@ function createSquare() {
 
     setTimeout(() => {
         gameArea.removeChild(square);
-    }, 3000);
+    }, 1000);
 }
 
 function updateScore() {
     scoreDisplay.textContent = `Score: ${score}`;
 }
 
-setInterval(createSquare, 1000);
+setInterval(createSquare, 500);
