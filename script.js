@@ -27,14 +27,14 @@ function createSquare() {
 
     setTimeout(() => {
         gameArea.removeChild(square);
-    }, 3000);
+    }, 200);
 }
 
 function updateScore() {
     scoreDisplay.textContent = `Score: ${score}`;
 }
 
-setInterval(createSquare, 1000);
+setInterval(createSquare, 200);
 
 playButton.addEventListener('click', () => {
     window.location.href = 'game.html'; // Redireciona para game.html ao clicar em Jogar
