@@ -1,6 +1,8 @@
 const gameArea = document.getElementById('game-area');
 const scoreDisplay = document.getElementById('score-display');
+const playButton = document.getElementById('play-button');
 let score = 0;
+
 
 function createSquare() {
     const square = document.createElement('div');
@@ -12,7 +14,6 @@ function createSquare() {
     square.style.left = `${x}px`;
     square.style.top = `${y}px`;
 
-    // Gerar cores aleatórias
     const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
     square.style.backgroundColor = randomColor;
 
@@ -26,11 +27,16 @@ function createSquare() {
 
     setTimeout(() => {
         gameArea.removeChild(square);
-    }, 200);
+    }, 3000);
 }
 
 function updateScore() {
     scoreDisplay.textContent = `Score: ${score}`;
 }
 
-setInterval(createSquare, 200);
+setInterval(createSquare, 1000);
+
+playButton.addEventListener('click', () => {
+    window.location.href = 'game.html'; // Redireciona para game.html ao clicar em Jogar
+});
+
