@@ -26,7 +26,7 @@ function createSquare() {
 
     setTimeout(() => {
         gameArea.removeChild(square);
-    }, 1000);
+    }, 500);
 }
 
 function updateScore() {
