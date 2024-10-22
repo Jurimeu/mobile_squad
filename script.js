@@ -1,7 +1,16 @@
 const gameArea = document.getElementById('game-area');
 const scoreDisplay = document.getElementById('score-display');
 const playButton = document.getElementById('play-button');
+const facil = document.getElementById('facil');
+const medio = document.getElementById('medio');
+const dificil = document.getElementById('dificil');
+
+
+
 let score = 0;
+
+let velocidade = 500;
+
 
 
 function createSquare() {
@@ -27,16 +36,34 @@ function createSquare() {
 
     setTimeout(() => {
         gameArea.removeChild(square);
-    }, 500);
+    }, velocidade);
 }
 
 function updateScore() {
     scoreDisplay.textContent = `Score: ${score}`;
 }
 
-setInterval(createSquare, 500);
+setInterval(createSquare, velocidade);
+
 
 playButton.addEventListener('click', () => {
     window.location.href = 'game.html'; // Redireciona para game.html ao clicar em Jogar
 });
+
+facil.addEventListener('click', () => {
+    window.location.href = 'game.html'; // Redireciona para game.html ao clicar em Jogar
+    velocidade = 1000;
+});
+
+medio.addEventListener('click', () => {
+    window.location.href = 'game.html'; // Redireciona para game.html ao clicar em Jogar
+    velocidade = 500;
+});
+
+dificil.addEventListener('click', () => {
+    window.location.href = 'game.html'; // Redireciona para game.html ao clicar em Jogar
+    velocidade = 200;
+});
+
+
 
