@@ -9,7 +9,7 @@ const dificil = document.getElementById('dificil');
 
 let score = 0;
 
-let velocidade = 500;
+let velocidade = 250;
 
 
 
